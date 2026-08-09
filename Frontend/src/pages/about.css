@@ -1,0 +1,174 @@
+.about-page {
+  min-height: 100vh;
+
+  padding: 140px 8% 100px;
+
+  box-sizing: border-box;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(56, 189, 248, 0.08),
+      transparent 35%
+    );
+}
+
+
+/* HERO */
+
+.about-hero {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+.about-badge {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  margin-bottom: 25px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(56, 189, 248, 0.3);
+
+  color: #38bdf8;
+
+  background: rgba(56, 189, 248, 0.06);
+
+  font-size: 14px;
+}
+
+.about-hero h1 {
+  margin: 0;
+
+  font-size: clamp(45px, 6vw, 72px);
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.about-hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #6366f1,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.about-hero p {
+  max-width: 680px;
+
+  margin: 28px auto 0;
+
+  color: #94a3b8;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.about-cards {
+  max-width: 1100px;
+
+  margin: 80px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.about-card {
+  padding: 30px;
+
+  border-radius: 18px;
+
+  background: rgba(15, 23, 42, 0.65);
+
+  border: 1px solid rgba(148, 163, 184, 0.12);
+
+  transition: border-color 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.about-icon {
+  font-size: 32px;
+
+  margin-bottom: 18px;
+}
+
+.about-card h2 {
+  margin: 0 0 12px;
+
+  font-size: 22px;
+}
+
+.about-card p {
+  margin: 0;
+
+  color: #94a3b8;
+
+  line-height: 1.7;
+
+  font-size: 15px;
+}
+
+
+/* BOTTOM */
+
+.about-bottom {
+  max-width: 750px;
+
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+.about-bottom h2 {
+  font-size: 32px;
+
+  margin-bottom: 18px;
+}
+
+.about-bottom p {
+  color: #94a3b8;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+}

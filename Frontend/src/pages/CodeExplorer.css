@@ -1,0 +1,282 @@
+.explorer-page {
+  min-height: 100vh;
+  padding: 100px 8%;
+  background: #020617;
+  color: white;
+}
+
+.explorer-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.explorer-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #38bdf8;
+  border-radius: 30px;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.explorer-header h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.explorer-header p {
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+.explorer-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.code-panel,
+.explanation-panel {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.code-panel h2,
+.explanation-panel h2 {
+  margin-bottom: 20px;
+}
+
+.code-panel textarea {
+  width: 100%;
+  min-height: 350px;
+  resize: vertical;
+  background: #020617;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: monospace;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.code-panel textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.explanation-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mode {
+  padding: 15px;
+  text-align: left;
+  background: #020617;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.mode:hover {
+  border-color: #38bdf8;
+  color: white;
+}
+
+.mode.active {
+  background: #0369a1;
+  border-color: #38bdf8;
+  color: white;
+}
+
+.explain-button {
+  width: 100%;
+  margin-top: 25px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explain-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.explorer-result {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 30px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 18px;
+}
+
+.explorer-result h2 {
+  color: #38bdf8;
+}
+
+.explorer-result pre {
+  white-space: pre-wrap;
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-family: inherit;
+}
+
+@media (max-width: 900px) {
+
+  .explorer-workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .explorer-header h1 {
+    font-size: 38px;
+  }
+
+}
+/* ============================= */
+/* AI FOLLOW-UP */
+/* ============================= */
+
+.followup-box {
+  margin-top: 40px;
+  padding: 28px;
+  background: #020617;
+  border: 1px solid #1e3a5f;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.08);
+}
+
+.followup-box h3 {
+  margin: 0 0 8px;
+  color: #38bdf8;
+  font-size: 20px;
+}
+
+.followup-box p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+
+
+/* Question input */
+
+.followup-input {
+  display: flex;
+  gap: 12px;
+}
+
+.followup-input input {
+  flex: 1;
+  padding: 14px 16px;
+
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 10px;
+
+  color: white;
+  font-size: 15px;
+
+  outline: none;
+}
+
+.followup-input input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.15);
+}
+
+
+/* Ask button */
+
+.followup-input button {
+  padding: 14px 22px;
+
+  background: #2563eb;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.followup-input button:hover {
+  background: #38bdf8;
+  transform: translateY(-2px);
+}
+
+.followup-input button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Suggested questions */
+
+.suggested-questions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+
+  margin-top: 18px;
+}
+
+.suggested-questions button {
+  padding: 8px 13px;
+
+  background: #0f172a;
+  color: #94a3b8;
+
+  border: 1px solid #334155;
+  border-radius: 20px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.suggested-questions button:hover {
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+
+/* AI Answer */
+
+.followup-answer {
+  margin-top: 25px;
+  padding: 22px;
+
+  background: #0f172a;
+  border-left: 3px solid #38bdf8;
+
+  border-radius: 10px;
+
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.followup-answer h3 {
+  color: #60a5fa;
+  margin-bottom: 15px;
+}
+
+.followup-answer p {
+  color: #cbd5e1;
+}

@@ -1,0 +1,29 @@
+.result-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+  border-color: #2563eb;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.card-title h3 {
+  margin: 0;
+}
+
+.result-card p {
+  color: #cbd5e1;
+}
