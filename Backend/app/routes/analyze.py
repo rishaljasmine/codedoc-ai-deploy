@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 from app.models.request_model import CodeRequest
 from app.models.response_model import CodeResponse
-from app.services.ollama_service import analyze_code
+from app.services.gemini_service import analyze_code
 
 router = APIRouter()
 
