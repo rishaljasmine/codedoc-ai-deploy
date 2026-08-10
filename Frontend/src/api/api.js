@@ -71,6 +71,10 @@
 // }
 const API_URL = import.meta.env.VITE_API_URL || "https://codedoc-ai-deploy.onrender.com";
 
+if (!import.meta.env.VITE_API_URL) {
+  console.info("Using default Render backend URL:", API_URL);
+}
+
 export async function generateDocumentation(code) {
   const response = await fetch(`${API_URL}/generate`, {
     method: "POST",
