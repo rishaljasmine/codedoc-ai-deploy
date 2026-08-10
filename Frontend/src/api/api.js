@@ -69,8 +69,7 @@
 
 //   return data;
 // }
-const API_URL = "https://codedoc-ai-deploy.onrender.com"||import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
-
+const API_URL = import.meta.env.VITE_API_URL || "https://codedoc-ai-deploy.onrender.com";
 
 export async function generateDocumentation(code) {
   const response = await fetch(`${API_URL}/generate`, {
@@ -83,8 +82,11 @@ export async function generateDocumentation(code) {
     })
   });
 
-  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(`generateDocumentation failed: ${response.status}`);
+  }
 
+  const data = await response.json();
   return data;
 }
 
@@ -100,8 +102,11 @@ export async function exploreCode(code, mode) {
     })
   });
 
-  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(`exploreCode failed: ${response.status}`);
+  }
 
+  const data = await response.json();
   return data;
 }
 
@@ -121,7 +126,10 @@ export async function askFollowup(code, question) {
     })
   });
 
-  const data = await response.json();
+  if (!response.ok) {
+    throw new Error(`askFollowup failed: ${response.status}`);
+  }
 
+  const data = await response.json();
   return data;
 }

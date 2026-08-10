@@ -1,13 +1,13 @@
 import axios from "axios";
 
-const API = axios.create({
-  baseURL: "http://127.0.0.1:8000",
-});
+const API_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
+const API = axios.create({
+  baseURL: API_URL,
+});
 
 // Documentation Generator
 export const generateDocumentation = async (code) => {
-
   const response = await API.post("/generate", {
     code: code,
   });
@@ -15,10 +15,8 @@ export const generateDocumentation = async (code) => {
   return response.data;
 };
 
-
 // Code Explorer
 export const exploreCode = async (code, mode) => {
-
   const response = await API.post("/explore", {
     code: code,
     mode: mode,
@@ -27,10 +25,8 @@ export const exploreCode = async (code, mode) => {
   return response.data;
 };
 
-
 // AI Follow-up
 export const askFollowup = async (code, question) => {
-
   const response = await API.post("/followup", {
     code: code,
     question: question,
