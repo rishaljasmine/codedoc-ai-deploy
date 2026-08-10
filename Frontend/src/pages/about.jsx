@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./About.css";
+import "./about.css";
 
 function About() {
   return (

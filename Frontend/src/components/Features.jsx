@@ -1,4 +1,4 @@
-import FeatureCard from "./FeatureCard";
+import FeatureCard from "./featurecard";
 import "./Features.css";
 
 function Features() {
