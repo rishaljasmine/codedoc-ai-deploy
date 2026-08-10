@@ -8,6 +8,7 @@ function Navbar() {
       <Link to="/" className="navbar-logo">
         <span className="logo-icon">✦</span>
         <span>CodeDoc AI</span>
+        <p>hiii</p>
       </Link>
 
       <div className="navbar-links">
